@@ -1,0 +1,388 @@
+
+@import url(~@angular/material/prebuilt-themes/indigo-pink.css);
+@import url(assets/styles/dynform/mort_dos_framework.less);
+@import url(assets/css/common.less);
+
+:root {
+  --primary: #AB2323;
+  --white: #FFF;
+  --smoke-white: #eeeeee;
+  --card-white: #F9F0F0;
+  --grey: #757575;
+  --dark-grey: #616161;
+  --warning: #FF6E23;
+  --success: #417505;
+  --info: #0079C1;
+  --danger: #D31028;
+  --lime: #880732;
+  --link: #4a90e2;
+  --light-grey: #DCDCDC;
+
+    --val-mtg-blue-h: 210;
+  --val-mtg-blue-s: 50%;
+
+  --mtg-blue: hsl(
+    var(--val-mtg-blue-h),
+    var(--val-mtg-blue-s),
+    40%
+  );
+
+  --mtg-blue-light: hsl(
+    var(--val-mtg-blue-h),
+    var(--val-mtg-blue-s),
+    50%
+  );
+
+  --mtg-blue-x-light: hsl(
+    var(--val-mtg-blue-h),
+    var(--val-mtg-blue-s),
+    92%
+  );
+
+  --mtg-blue-xx-light: hsl(
+    var(--val-mtg-blue-h),
+    var(--val-mtg-blue-s),
+    97%
+  );
+
+  --val-mtg-red-h: 349;
+  --val-mtg-red-s: 73%;
+
+  --mtg-red: hsl(
+    var(--val-mtg-red-h),
+    var(--val-mtg-red-s),
+    40%
+  );
+
+  --mtg-red-light: hsl(
+    var(--val-mtg-red-h),
+    var(--val-mtg-red-s),
+    50%
+  );
+
+  --mtg-red-x-light: hsl(
+    var(--val-mtg-red-h),
+    var(--val-mtg-red-s),
+    92%
+  );
+
+  --mtg-red-xx-light: hsl(
+    var(--val-mtg-red-h),
+    var(--val-mtg-red-s),
+    97%
+  );
+}
+
+body{
+    background-color: #eeeeee;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.alignButtom{
+    position: absolute;
+    left: 0rem;
+    bottom: 0rem;
+}
+
+.highlightOnHover{
+    background-color: inherit;
+    cursor: none;
+}
+.highlightOnHover:hover{
+    background-color: #eff0fc !important;
+    cursor: pointer;
+}
+.mat-autocomplete-pabel{
+    max-height: 450px !important;
+}
+.mat-radio-ripple{
+    display: none;
+}
+.mat-radio-outer-circle{
+    height: 15px !important;
+    width: 15px !important;
+    border-width: 1px !important;
+    border-color: #336699;
+}
+.mat-radio-inner-circle{
+    height: 15px !important;
+    width: 15px !important;
+    background-color: #336699;
+}
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle{
+    border-color: #336699;
+}
+.mat-radio-button.mat-accent .mat-radio-inner-circle{
+    border-color: #336699;
+}
+.mat-radio-label-content{
+    padding-left: 0px !important;
+    font-size: 14px;
+}
+.dtpicker{
+    .mydp, .mydp .headertodaybtn{
+        border-top: opx !important;
+        border-left: opx !important;
+        border-right: opx !important;
+    }
+}
+.btn-mtgBlue {
+  color: white !important;
+  background-color: var(--mtg-blue) !important;
+  font-size: 0.92rem !important;
+  height: 35px !important;
+  text-align: center !important;
+  margin: 5px !important;
+  padding: 5px 15px 5px 15px !important;
+  cursor: pointer !important;
+  border-radius: 0.25rem !important;
+}
+
+.btn-mtgBlue:hover,
+.btn-mtgBlue:focus {
+  background-color: var(--mtg-blue-light) !important;
+}
+
+.btn-mtgRed {
+  color: white !important;
+  background-color: var(--mtg-red) !important;
+  font-size: 0.92rem !important;
+  height: 35px !important;
+  text-align: center !important;
+  margin: 5px !important;
+  padding: 5px 15px 5px 15px !important;
+  cursor: pointer !important;
+  border-radius: 0.25rem !important;
+}
+
+.btn-mtgRed:hover,
+.btn-mtgRed:focus {
+  background-color: var(--mtg-red-light) !important;
+}
+
+.btn-outline-mtgBlue {
+  color: var(--mtg-blue) !important;
+  border: 1px solid var(--mtg-blue) !important;
+  background-color: white !important;
+  font-size: 0.94rem !important;
+  height: 35px !important;
+  text-align: center !important;
+  margin: 5px !important;
+  padding: 5px 15px 5px 15px !important;
+  cursor: pointer !important;
+  border-radius: 0.25rem !important;
+  font-weight: 400;
+}
+
+.btn-outline-mtgBlue:hover,
+.btn-outline-mtgBlue:focus {
+  background-color: var(--mtg-blue-x-light) !important;
+}
+
+.btn-outline-mtgRed {
+  color: var(--mtg-red) !important;
+  border: 2px solid var(--mtg-red) !important;
+  background-color: var(--mtg-red-xx-light) !important;
+  font-size: 0.92rem !important;
+  height: 35px !important;
+  text-align: center !important;
+  margin: 5px !important;
+  padding: 5px 15px 5px 15px !important;
+  cursor: pointer !important;
+  border-radius: 0.25rem !important;
+  font-weight: 400;
+}
+
+.btn-outline-mtgRed:hover,
+.btn-outline-mtgRed:focus {
+  background-color: var(--mtg-red-x-light) !important;
+}
+
+.text-mtgBlue {
+  color: var(--mtg-blue) !important;
+}
+
+.text-mtgRed {
+  color: var(--mtg-red) !important;
+}
+
+.bg-mtgBlue {
+  background-color: var(--mtg-blue) !important;
+}
+
+.bg-mtgRed {
+  background-color: var(--mtg-red) !important;
+}
+
+.bg-mtgBlue-x-light {
+  background-color: var(--mtg-blue-x-light);
+}
+
+.bg-mtgRed-x-light {
+  background-color: var(--mtg-red-x-light) !important;
+}
+
+.bg-white {
+  background-color: white;
+}
+.clickable {
+  cursor: pointer;
+}
+
+@media all and (-ms-high-contrast: none),
+  (-ms-high-contrast: active) {
+  
+  // IE10+ CSS here
+  .card {
+    display: block !important;
+  }
+}
+
+a:not([href]):not([tabindex]),
+a:not([href]):not([tabindex]):focus,
+a:not([href]):not([tabindex]):hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.btn:first-of-type {
+  margin-right: 0.3rem;
+}
+
+mat-radio-button:first-of-type {
+  margin-right: 0.25rem;
+}
+
+.mat-autocomplete-panel {
+  background: #ffffff;
+}
+
+.mat-autocomplete-panel:not([class*="mat-elevation-z"]) {
+  box-shadow:
+    0 5px 5px 3px rgba(0, 0, 0, 0.2),
+    0 8px 10px 1px rgba(0, 0, 0, 0.14),
+    0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.deal-box-status-label {
+  margin-right: 0.25rem;
+}
+
+.deal-box-status {
+  margin-left: 0.25rem;
+}
+
+.btn-prospect-rev {
+  min-width: 100px;
+  background-color: #369;
+  color: #fff;
+  max-width: 300px;
+}
+
+.btn-prospect-rev:hover {
+  color: #fff;
+}
+
+.summary-container .col-7 {
+  padding-left: 0px;
+  padding-right: 1.5rem;
+}
+
+.summary-container .col-7 .row.col-12 {
+  padding: 0px;
+}
+
+.section-heading .mat-expansion-panel-body {
+  padding: 0 24px 12px !important;
+}
+
+my-pagination .ngx-pagination li.current {
+  background-color: #326699;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.mat-select-panel:not([class*="mat-elevation-z"]) {
+  box-shadow:
+    0 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0 4px 5px 0 rgba(0, 0, 0, 0.14),
+    0 1px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.mat-select-panel {
+  background: #fff;
+}
+
+.mat-select-panel .mat-option.mat-selected:not(.mat-option-multiple) {
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.mat-option.mat-selected:not(.mat-option-multiple):not(.mat-option-disabled) {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.mat-option.mat-active {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.mat-dialog-container {
+  background: #fff;
+}
+
+.mat-ink-bar {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  transition: 500ms cubic-bezier(0.35, 0, 0.25, 1);
+}
+
+.mat-tab-group.mat-primary .mat-ink-bar,
+.mat-tab-nav-bar.mat-primary .mat-ink-bar {
+  background-color: #3f51b5;
+}
+
+.mat-tab-nav-bar,
+.mat-tab-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.promtTxtDiv {
+  color: @base-info-color;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-top: 25px;
+  position: relative;
+  margin: 20px auto;
+  display: block;
+  text-transform: uppercase;
+}
+
+// Center panel.
+.center-container {
+  padding: 1rem 2rem;
+}
+
+.border-none {
+  border: none;
+}

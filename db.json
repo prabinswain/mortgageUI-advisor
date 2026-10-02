@@ -1,0 +1,150 @@
+{
+    "refreshMortgageData": {
+        "mortgage_number": 12345678,
+        "charge_rank": 1,
+        "loan_balance": 250000.00,
+        "maturity_date": "2031-06-30",
+        "original_loan_amount": 300000.00,
+        "outstanding_mortgage_amount": 240000.00,
+        "previous_insurer_number": "POL123456",
+        "excalibur_refresh_date": "2026-03-10",
+        "principal_balance_at_dfr": 245000.00,
+        "remaining_term_as_of_dfr": 60,
+        "contract_interest_rate": 3.25,
+        "product_code": "CD",
+        "promo_btp_rate_adjustment": 0.10,
+        "interest_rate": 3.35,
+        "promo_rate_adjustment": 0.05,
+        "MRORateFlag": "Y",
+        "mroDiscounts": [
+            {
+                "productId": "1011",
+                "mroDiscount": 0.0
+            },
+            {
+                "productId": "3002",
+                "mroDiscount": 0.0
+            },
+            {
+                "productId": "1010",
+                "mroDiscount": 0.0
+            },
+            {
+                "productId": "1008",
+                "mroDiscount": 0.0
+            },
+            {
+                "productId": "1007",
+                "mroDiscount": 0.0
+            },
+            {
+                "productId": "1006",
+                "mroDiscount": 0.0
+            },
+            {
+                "productId": "1005",
+                "mroDiscount": 0.0
+            },
+            {
+                "productId": "1006",
+                "mroDiscount": 0.0
+            },
+            {
+                "productId": "1004",
+                "mroDiscount": 0.0
+            },
+            {
+                "productId": "1003",
+                "mroDiscount": 0.0
+            },
+            {
+                "productId": "1002",
+                "mroDiscount": 0.0
+            },
+            {
+                "productId": "1001",
+                "mroDiscount": 0.0
+            },
+            {
+                "productId": "1009",
+                "mroDiscount": 0.0
+            }
+        ]
+    },
+    "fetchStoredExcaliburDate": {
+        "mortgage_number": 12345678,
+        "charge_rank": 1,
+        "loan_balance": 250000.00,
+        "maturity_date": "2031-06-30",
+        "original_loan_amount": 300000.00,
+        "outstanding_mortgage_amount": 240000.00,
+        "previous_insurer_number": "POL123456",
+        "excalibur_refresh_date": "2026-03-10",
+        "principal_balance_at_dfr": 245000.00,
+        "remaining_term_as_of_dfr": 60,
+        "contract_interest_rate": 3.25,
+        "product_code": "CD",
+        "promo_btp_rate_adjustment": 0.10,
+        "interest_rate": 3.35,
+        "promo_rate_adjustment": 0.05,
+        "MRORateFlag": "Y",
+        "mroDiscounts": [
+            {
+                "productId": "1011",
+                "mroDiscount": 0.0
+            },
+            {
+                "productId": "3002",
+                "mroDiscount": 0.0
+            },
+            {
+                "productId": "1010",
+                "mroDiscount": 0.0
+            },
+            {
+                "productId": "1008",
+                "mroDiscount": 0.0
+            },
+            {
+                "productId": "1007",
+                "mroDiscount": 0.0
+            },
+            {
+                "productId": "1006",
+                "mroDiscount": 0.0
+            },
+            {
+                "productId": "1005",
+                "mroDiscount": 0.0
+            },
+            {
+                "productId": "1006",
+                "mroDiscount": 0.0
+            },
+            {
+                "productId": "1004",
+                "mroDiscount": 0.0
+            },
+            {
+                "productId": "1003",
+                "mroDiscount": 0.0
+            },
+            {
+                "productId": "1002",
+                "mroDiscount": 0.0
+            },
+            {
+                "productId": "1001",
+                "mroDiscount": 0.0
+            },
+            {
+                "productId": "1009",
+                "mroDiscount": 0.0
+            }
+        ]
+    },
+    "retreiveblendedRateAdjustment": {
+        "status": "Success",
+        "blendedRateAdjustment": "3.475"
+    }
+}

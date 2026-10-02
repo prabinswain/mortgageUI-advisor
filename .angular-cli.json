@@ -1,0 +1,71 @@
+{
+    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+    "projects": {
+        "name": "m-mortgage-cibc"
+    },
+    "apps": [
+        {
+            "root": "src",
+            "outDir": "dist",
+            "assets": [
+                "src/assets",
+                "src/favicon.ico"
+            ],
+            "index": "index.html",
+            "main": "main.ts",
+            "polyfills": "polyfills.ts",
+            "test": "test.ts",
+            "tsconfig": "tsconfig.app.json",
+            "testTsconfig": "tsconfig.spec.json",
+            "prefix": "app",
+            "styles": [
+                "node_modules/bootstrap/dist/css/bootstrap.min.css",
+                "node_modules/font-awesome/css/font-awesome.min.css",
+                "node_modules/material-icons/iconfont/material-icons.css",
+                "src/styles.less"
+            ],
+            "scripts": [
+                "node_modules/jquery/dist/jquery.min.js",
+                "node_modules/popper.js/dist/umd/popper.js",
+                "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ],
+            "environmentSources": "environments.environment.ts",
+            "environments": {
+                "dev": "environments.environment.ts",
+                "prod": "environments/environment.prod.ts",
+                "azure-dev": "environments/environment.azure-dev.ts",
+                "azure-dev-local": "environments/environment.azure-dev-local.ts",
+                "azure-sit-local": "environments/environment.azure-sit-local.ts",
+                "azure-uat-local": "environments/environment.azure-uat-local.ts"
+            }
+        }
+    ],
+    "e2e": {
+        "protractor": {
+            "config": "./protractor.conf.ts"
+        }
+    },
+    "lint": [
+        {
+            "projects" : "src/tsconfig.app.json",
+            "exclude": "**/node_modules/**"
+        },
+        {
+            "projects" : "src/tsconfig.spec.json",
+            "exclude": "**/node_modules/**"
+        },
+        {
+            "projects" : "src/tsconfig.e2e.json",
+            "exclude": "**/node_modules/**"
+        }
+    ],
+    "test": {
+        "karma" :{
+            "config": "./karma.config.js"
+        }
+    },
+    "defults": {
+        "styleExt": "less",
+        "component": {}
+    }
+}

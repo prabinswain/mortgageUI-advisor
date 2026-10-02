@@ -1,0 +1,186 @@
+{
+    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+    "version": 1,
+    "newProjectRoot": "projects",
+    "projects": {
+        "m-mortgage-cibc": {
+            "root": "",
+            "sourceRoot": "src",
+            "projectType": "application",
+            "architect": {
+                "build": {
+                    "builder": "ngx-build-plus:browser",
+                    "options": {
+                        "outputPath": "dist",
+                        "index": "src/index.html",
+                        "main": "src/main.ts",
+                        "tsConfig": "src/tsconfig.app.json",
+                        "polyfills": "src/polyfills.ts",
+                        "assets": [
+                            "src/assets",
+                            "src/favicon.ico"
+                        ],
+                        "styles": [
+                            "node_modules/bootstrap/dist/css/bootstrap.min.css",
+                            "node_modules/font-awesome/css/font-awesome.min.css",
+                            "node_modules/material-icons/iconfont/material-icons.css",
+                            "src/styles.less"
+                        ],
+                        "scripts": [
+                            "node_modules/jquery/dist/jquery.min.js",
+                            "node_modules/popper.js/dist/umd/popper.js",
+                            "node_modules/bootstrap/dist/js/bootstrap.min.js"
+                        ],
+                        "aot": true,
+                        "vendorChunk": true,
+                        "extractLicenses": false,
+                        "buildOptimizer": false,
+                        "sourceMap": true,
+                        "optimization": false,
+                        "namedChunks": true,
+                        "extraWebpackConfig": "webpack.config.js",
+                        "commonChunk": false
+                    },
+                    "configurations": {
+                        "production": {
+                            "optimization": true,
+                            "outputHashing": "all",
+                            "sourceMap": false,
+                            "namedChunks": false,
+                            "aot": true,
+                            "extractLicenses": true,
+                            "vendorChunk": false,
+                            "buildOptimizer": true,
+                            "fileReplacements": [
+                                {
+                                    "replace": "src/environments/environment.ts",
+                                    "with": "src/environments/environment.prod.ts"
+                                }
+                            ],
+                            "extraWebpackConfig": "webpack.prod.config.js"
+                        },
+                        "azure-dev": {
+                            "fileReplacements": [
+                                {
+                                    "replace": "src/environments/environment.ts",
+                                    "with": "src/environments/environment.azure-dev.ts"
+                                }
+                            ],
+                            "extraWebpackConfig": "webpack.dev.config.js"
+                        },
+                        "azure-dev-local": {
+                            "fileReplacements": [
+                                {
+                                    "replace": "src/environments/environment.ts",
+                                    "with": "src/environments/environment.azure-dev-local.ts"
+                                }
+                            ],
+                            "extraWebpackConfig": "webpack.dev.config.js"
+                        },
+                        "azure-sir-local": {
+                            "fileReplacements": [
+                                {
+                                    "replace": "src/environments/environment.ts",
+                                    "with": "src/environments/environment.azure-sit-local.ts"
+                                }
+                            ]
+                        },
+                        "azure-uat-local": {
+                            "fileReplacements": [
+                                {
+                                    "replace": "src/environments/environment.ts",
+                                    "with": "src/environments/environment.azure-uat-local.ts"
+                                }
+                            ]
+                        }
+                    },
+                    "defaultConfiguration": ""
+                },
+                "serve": {
+                    "builder": "ngx-build-plus:dev-server",
+                    "options": {
+                        "browserTarget": "m-mortgage-cibc:build",
+                        "port": 4200,
+                        "publicHost": "http://localhost:4200",
+                        "extraWebpackConfig": "webpack.config.js"
+                    },
+                    "configurations": {
+                        "production": {
+                            "browserTarget": "m-mortgage-cibc: build: production",
+                            "extraWebpackConfig": "webpack.prod.config.js"
+                        },
+                        "azure-dev": {
+                            "browserTarget": "m-mortgage-cibc:build:azure-dev"
+                        },
+                        "azure-dev-local": {
+                            "browserTarget": "m-mortgage-cibc:build: azure-dev-local"
+                        },
+                        "azure-sit-local": {
+                            "browserTarget": "m-mortgage-cibc:build: azure-sit-local"
+                        },
+                        "azure-uat-local": {
+                            "browserTarget": "m-mortgage-cibc:build: azure-uat-local"
+                        }
+                    }
+                },
+                "extract-i18n": {
+                    "builder": "ngx-build-plus:extract-i18n",
+                    "production": {
+                        "browserTarget": "m-mortgage-cibc:build:",
+                        "extraWebpackConfig": "webpack.config.js"
+                    }
+                },
+                "test": {
+                    "builder": "@angular-devkit/build-angular: karma",
+                    "options": {
+                        "main": "src/test.ts",
+                        "karmaConfig": "./karma.conf.js",
+                        "polyfills": "src/polyfills.ts",
+                        "tsConfig": "src/tsconfig.spec.json",
+                        "scripts": [
+                            "node_modules/jquery/dist/jquery.min.js",
+                            "node_modules/popper.js/dist/umd/popper.js",
+                            "node_modules/bootstrap/dist/js/bootstrap.min.js"
+                        ],
+                        "styles": [
+                            "node_modules/bootstrap/dist/css/bootstrap.min.css",
+                            "node_modules/font-awesome/css/font-awesome.min.css",
+                            "node_modules/material-icons/iconfont/material-icons.css",
+                            "src/styles.less"
+                        ],
+                        "assets":[
+                            "src/assets",
+                            "src/favicon.ico"
+                        ]
+                    }
+                }
+            }
+        },
+        "m-mortgage-cibc-e2e": {
+            "root": "e2e",
+            "sourceRoot": "e2e",
+            "projectType": "application",
+            "architect": {
+                "e2e": {
+                    "builder": "@angular-devkit/build-angular: protractor",
+                    "options": {
+                        "protractorConfig": "./protractor.conf.js",
+                        "devServerTarget": "m-mortgage-cibc: serve"
+                    }
+                }
+            }
+        }
+    },
+    "schematics": {
+        "@schematics/angular:component": {
+            "prefix": "app",
+            "style": "less"
+        },
+        "@schematics/angular: directive": {
+            "prefix": "app"
+        }
+    },
+    "cli": {
+        "analytics": false
+    }
+}

@@ -1,6 +1,9 @@
+```less
 @base-url: "./../../assets/";
 
-/* Media */
+/* =========================================================
+   Media
+   ========================================================= */
 
 @smartphones: ~"only screen and (max-width: 767px)";
 @x-large-desktop: ~"only screen and (min-width: 1200px) and (max-width: 1407px)";
@@ -18,14 +21,429 @@
 @xxxx-large-desktop: ~"only screen and (min-width: 1920px)";
 
 
-/* Themes */
+/* =========================================================
+   Theme
+   ========================================================= */
+
 /* Link Colors */
+
 @link-color: #0091ff;
 @link-color-hover: #117fda;
 
+
 /* Button Colors */
+
 /* Primary */
+
 @btn-primary-color: #4f8303;
 @btn-primary-color-hover: #61980f;
 @btn-primary-text: #ffffff;
 @btn-primary-disabled: rgba(79, 131, 3, 0.5);
+
+
+/* Secondary */
+
+@btn-secondary-color: #369;
+@btn-secondary-color-hover: #369;
+@btn-secondary-text: #369;
+@btn-secondary-hover-text: #ffffff;
+
+
+/* Cancel */
+
+@btn-cancel-color: #b7b7b7;
+@btn-cancel-color-hover: #b7b7b7;
+@btn-cancel-text: #274669;
+
+
+/* Green */
+
+@btn-green-color: #6eb919;
+@btn-green-color-hover: #63a616;
+@btn-green-text: #ffffff;
+
+
+/* Base Colors */
+
+@base-secondary-color: #a93439;
+@base-primary-color: #333333;
+
+
+/* Base Background Colors */
+
+@base-background: #ffffff;
+@secondary-background: #ffffff;
+@table-alternate-color: #ffffff;
+@dashboard-items-background: #f4f4f6;
+@message-background: #dfe4ea;
+@message-secondary-background: #7a98bc;
+@selected-background-color: #4f8303;
+@announcement-bg-color: #369;
+
+
+/* Base Text Colors */
+
+@base-text-color: #369;
+@base-info-color: #a93439;
+@secondary-text-color: #ffffff;
+@label-text-color: #757575;
+@table-head-color: #757575;
+@base-count-color: #ac0d20;
+@base-input-color: #333;
+
+
+/* Border Colors */
+
+@border-primary-color: #e5e5e5;
+@border-secondary-color: #e1e1e1;
+@button-border-color: #999;
+@tab-border-color: #e2e2e2;
+
+
+/* Navigation */
+
+@nav-bg-color: #369;
+@nav-bg-active-color: #455f7d;
+@nav-bg-hover-color: #244f7f;
+
+
+/* Switch */
+
+@switch-on: #e3e3e3;
+@switch-on-text: #333333;
+@switch-off: #ffffff;
+@switch-off-text: #333333;
+
+
+/* Tab Colors */
+
+@tab-active-background: #455f7d;
+@tab-active-text: #fff;
+@tab-inactive-background: #fff;
+@tab-inactive-text: #005881;
+
+
+/* Selection */
+
+@item-selection: #0A3C61;
+
+
+/* Black Text */
+
+@black-text: #333333;
+
+
+/* Header */
+
+@header-bg-color: #ffffff;
+
+
+/* Body */
+
+@body-bg-color: #EBEBEF;
+@body-text-color: #333333;
+
+
+/* Footer */
+
+@footer-text-color: #fff;
+
+
+/* Small Text */
+
+@small-text-color: #222222;
+
+
+/* Notifications */
+
+@notification-bg-color: #a93439;
+@notification-text-color: #fff;
+
+
+/* Status Messages */
+
+@success-bg-color: #80cb66;
+@success-text-color: #fff;
+
+@pending-bg-color: #80cb66;
+@pending-text-color: #c3a207;
+
+
+/* Footer Privacy */
+
+@footer-privacy-text-color: #d3d3d3;
+
+
+/* Header Logo */
+
+@head-logo-width: 187px;
+@head-mob-logo-width: 170px;
+
+
+/* =========================================================
+   Fonts
+   ========================================================= */
+
+@font-face {
+    font-family: "Lato-Regular";
+    src: url("@{base-url}fonts/Lato-Regular.woff");
+}
+
+@font-face {
+    font-family: "Lato-Medium";
+    src: url("@{base-url}fonts/Lato-Medium.woff");
+}
+
+@font-face {
+    font-family: "Lato-Light";
+    src: url("@{base-url}fonts/Lato-Light.woff");
+}
+
+@font-face {
+    font-family: "Lato-Semibold";
+    src: url("@{base-url}fonts/Lato-Semibold.woff");
+}
+
+@font-face {
+    font-family: "Lato-Italic";
+    src: url("@{base-url}fonts/Lato-Italic.woff");
+}
+
+
+/* =========================================================
+   Mixins
+   ========================================================= */
+
+.text-shadow(@string: 0 1px 3px rgba(0, 0, 0, 0.25)) {
+    text-shadow: @string;
+}
+
+.box-shadow(@string) {
+    -webkit-box-shadow: @string;
+    -moz-box-shadow: @string;
+    box-shadow: @string;
+}
+
+.drop-shadow(
+    @x: 0,
+    @y: 1px,
+    @blur: 2px,
+    @spread: 0,
+    @alpha: 0.25
+) {
+    -webkit-box-shadow: @x @y @blur @spread rgba(0, 0, 0, @alpha);
+    -moz-box-shadow: @x @y @blur @spread rgba(0, 0, 0, @alpha);
+    box-shadow: @x @y @blur @spread rgba(0, 0, 0, @alpha);
+}
+
+.inner-shadow(
+    @x: 0,
+    @y: 1px,
+    @blur: 2px,
+    @spread: 0,
+    @alpha: 0.25
+) {
+    -webkit-box-shadow: inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+    -moz-box-shadow: inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+    box-shadow: inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+}
+
+.box-sizing(@type: border-box) {
+    -webkit-box-sizing: @type;
+    -moz-box-sizing: @type;
+    box-sizing: @type;
+}
+
+.border-radius(@radius: 5px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.border-radiuses(
+    @topright: 6px,
+    @bottomright: 6px,
+    @bottomleft: 0,
+    @topleft: 0
+) {
+    -webkit-border-top-right-radius: @topright;
+    -webkit-border-bottom-right-radius: @bottomright;
+    -webkit-border-bottom-left-radius: @bottomleft;
+    -webkit-border-top-left-radius: @topleft;
+
+    -moz-border-radius-topright: @topright;
+    -moz-border-radius-bottomright: @bottomright;
+    -moz-border-radius-bottomleft: @bottomleft;
+    -moz-border-radius-topleft: @topleft;
+
+    border-top-right-radius: @topright;
+    border-bottom-right-radius: @bottomright;
+    border-bottom-left-radius: @bottomleft;
+    border-top-left-radius: @topleft;
+
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+}
+
+.opacity(@opacity: 0.5) {
+    -webkit-opacity: @opacity;
+    -moz-opacity: @opacity;
+    opacity: @opacity;
+}
+
+.gradient(@startColor: #eee, @endColor: white) {
+    background-color: @startColor;
+    background: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        from(@startColor),
+        to(@endColor)
+    );
+    background: -webkit-linear-gradient(top, @startColor, @endColor);
+    background: -moz-linear-gradient(top, @startColor, @endColor);
+    background: -ms-linear-gradient(top, @startColor, @endColor);
+    background: -o-linear-gradient(top, @startColor, @endColor);
+}
+
+.horizontal-gradient(
+    @startColor: #eee,
+    @endColor: white
+) {
+    background-color: @startColor;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(@startColor),
+        to(@endColor)
+    );
+    background-image: -webkit-linear-gradient(
+        left,
+        @startColor,
+        @endColor
+    );
+    background-image: -moz-linear-gradient(
+        left,
+        @startColor,
+        @endColor
+    );
+    background-image: -ms-linear-gradient(
+        left,
+        @startColor,
+        @endColor
+    );
+    background-image: -o-linear-gradient(
+        left,
+        @startColor,
+        @endColor
+    );
+}
+
+.animation(
+    @name,
+    @duration: 300ms,
+    @delay: 0,
+    @ease: ease
+) {
+    -webkit-animation: @name @duration @delay @ease;
+    -moz-animation: @name @duration @delay @ease;
+    -ms-animation: @name @duration @delay @ease;
+    animation: @name @duration @delay @ease;
+}
+
+.transition(@transition) {
+    -webkit-transition: @transition;
+    -moz-transition: @transition;
+    -ms-transition: @transition;
+    -o-transition: @transition;
+    transition: @transition;
+}
+
+.transform(@string) {
+    -webkit-transform: @string;
+    -moz-transform: @string;
+    -ms-transform: @string;
+    -o-transform: @string;
+    transform: @string;
+}
+
+.scale(@factor) {
+    -webkit-transform: scale(@factor);
+    -moz-transform: scale(@factor);
+    -ms-transform: scale(@factor);
+    -o-transform: scale(@factor);
+    transform: scale(@factor);
+}
+
+.rotate(@deg) {
+    -webkit-transform: rotate(@deg);
+    -moz-transform: rotate(@deg);
+    -ms-transform: rotate(@deg);
+    -o-transform: rotate(@deg);
+    transform: rotate(@deg);
+}
+
+.skew(@deg, @deg2) {
+    -webkit-transform: skew(@deg, @deg2);
+    -moz-transform: skew(@deg, @deg2);
+    -ms-transform: skew(@deg, @deg2);
+    -o-transform: skew(@deg, @deg2);
+    transform: skew(@deg, @deg2);
+}
+
+.translate(@x, @y: 0) {
+    -webkit-transform: translate(@x, @y);
+    -moz-transform: translate(@x, @y);
+    -ms-transform: translate(@x, @y);
+    -o-transform: translate(@x, @y);
+    transform: translate(@x, @y);
+}
+
+.translate3d(@x, @y: 0, @z: 0) {
+    -webkit-transform: translate3d(@x, @y, @z);
+    -moz-transform: translate3d(@x, @y, @z);
+    -ms-transform: translate3d(@x, @y, @z);
+    -o-transform: translate3d(@x, @y, @z);
+    transform: translate3d(@x, @y, @z);
+}
+
+.perspective(@value: 1000px) {
+    -webkit-perspective: @value;
+    -moz-perspective: @value;
+    -ms-perspective: @value;
+    perspective: @value;
+}
+
+.transform-origin(@x: center, @y: center) {
+    -webkit-transform-origin: @x @y;
+    -moz-transform-origin: @x @y;
+    -ms-transform-origin: @x @y;
+    -o-transform-origin: @x @y;
+    transform-origin: @x @y;
+}
+
+
+/* =========================================================
+   Custom Mixins
+   ========================================================= */
+
+.margin(@top, @right, @bottom, @left) {
+    margin-top: @top;
+    margin-right: @right;
+    margin-bottom: @bottom;
+    margin-left: @left;
+}
+
+.padding(@top, @right, @bottom, @left) {
+    padding-top: @top;
+    padding-right: @right;
+    padding-bottom: @bottom;
+    padding-left: @left;
+}
+
+.wrap {
+    .margin(0, 15px, 0, 15px);
+}
+```
